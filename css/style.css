@@ -1,0 +1,199 @@
+/* -ESTILOS GENERALES- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #222;
+    background-color: #f5f5f5;
+}
+
+/* -ENCABEZADO CON PARALLAX- */
+header {
+    background-image: url("../images/GlobalLingua.png");
+    background-size: cover;
+    background-attachment: fixed; /* Parallax */
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+/*-Capa semitransparente para aumentar la legibilidad-*/
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(89, 87, 87, 0.65);
+    z-index: 0;
+}
+
+header h1, header p, header nav {
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* -MENÚ DE NAVEGACIÓN-*/
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* -CONTENIDO PRINCIPAL- */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+main article section img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    box-shadow: inset 0 4px 10px rgba(0,0,0,0.7px);
+}
+
+article, aside {
+    flex: 1 1 400px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    
+}
+
+/* Títulos */
+h2 {
+    color: #0062be;
+    margin-bottom: 10px;
+}
+
+/* Listas */
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+aside iframe{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+aside ul img{
+    border-radius: 8px;
+    box-shadow: inset 0 4px 10px rgba(0,0,0,0.7px);
+    
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #0062be;
+    color: white;
+}
+/*-FOOTER-*/
+footer {
+        background-color: #2a1e1b;
+        color: #f2ece9;
+        padding: 20px 10px;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        box-shadow: inset 0 4px 10px rgba(0,0,0,0.7);
+}
+    footer p {
+        margin: 0 0 10px;
+        font-size: 0.9em;
+    }
+
+    footer a {
+        color: #f2ece9;
+        margin: 0 12px;
+        font-size: 1.8em;
+        display: inline-block;
+        transition: color 0.4s ease;
+    }
+    footer a:hover {
+        color: #0062be;
+        text-shadow: 0 0 10px #0062be;
+        ;
+    }
+    
+
+/* -Responsividad- */
+@media (max-width: 768px) {
+    header {
+        padding: 60px 10px;
+        background-attachment: scroll; /* quita parallax en móviles */
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    article, aside {
+        margin: 10px 0;
+        
+    }
+}
